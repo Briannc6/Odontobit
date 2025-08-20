@@ -1,0 +1,673 @@
+/* Paleta azul menta y claro */
+:root {
+    --color-menta-claro: #5ee6e6;
+    --color-azul-menta: #2bb7b7;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #f6f8fa;
+    --color-texto: #222;
+}
+
+/* Fondo general */
+body {
+    background: var(--color-gris-claro);
+    color: var(--color-texto);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header y logo */
+header {
+    position: relative;
+    min-height: 80px;
+    padding: 8px 32px;
+    background: #5ee6e6;
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.08);
+    overflow: visible;
+}
+
+.logo {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    /* El logo no interfiere con los botones */
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+nav {
+    margin-left: 200px;
+    /* Ajusta el espacio para el logo más grande */
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a,
+#loginBtn {
+    color: var(--color-blanco);
+    /* Letras blancas en la navegación */
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+nav a {
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover,
+#loginBtn:hover {
+    background: var(--color-blanco);
+    color: var(--color-azul-menta);
+}
+
+#loginBtn {
+    margin-left: auto;
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+
+#loginBtn:hover {
+    background: var(--color-blanco);
+    color: var(--color-azul-menta);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(90deg, var(--color-menta-claro) 60%, var(--color-blanco) 100%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta {
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.2s;
+}
+
+.cta:hover {
+    background: var(--color-menta-claro);
+    color: var(--color-texto);
+}
+
+/* Servicios */
+.services {
+    background: var(--color-blanco);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.service-card {
+    background: var(--color-menta-claro);
+    color: var(--color-texto);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.08);
+    min-width: 220px;
+}
+
+/* Formulario de citas */
+.appointment {
+    background: var(--color-gris-claro);
+    padding: 40px 0;
+    text-align: center;
+}
+
+form label {
+    color: var(--color-azul-menta);
+    font-weight: 500;
+}
+
+form select,
+form input,
+form button {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-azul-menta);
+}
+
+form button {
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: var(--color-menta-claro);
+    color: var(--color-texto);
+}
+
+/* Footer */
+footer {
+    background: #5ee6e6;
+    /* Igual que el header */
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+footer a {
+    color: var(--color-blanco);
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 183, 183, 0.18);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--color-blanco);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.08);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+/* Header */
+header {
+    position: relative;
+    min-height: 80px;
+    padding: 8px 32px;
+    background: #5ee6e6;
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.08);
+    overflow: visible;
+}
+
+.logo {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    /* El logo no interfiere con los botones */
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+nav {
+    margin-left: 200px;
+    /* Ajusta el espacio para el logo más grande */
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Sección Hero */
+.hero {
+    background: #e6f2ff;
+    /* Azul claro */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Servicios en grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Estilos para el formulario de citas */
+.appointment {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0077b6;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #0077b6;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #005f8d;
+}
+
+/* Footer */
+footer {
+    background: #5ee6e6;
+    /* Igual que el header */
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+footer a {
+    color: var(--color-blanco);
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.btn-primary,
+form button {
+    background: #5ee6e6;
+    /* Igual que el header */
+    color: var(--color-blanco);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover,
+form button:hover {
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #0077b6;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #0077b6;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #0077b6;
+    color: white;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 0.5s ease-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        min-height: 180px;
+        padding: 16px 12px;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+        margin-bottom: 16px;
+    }
+
+    .logo img {
+        width: 260px;
+        height: 260px;
+    }
+
+    nav {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    nav a,
+    #loginBtn {
+        width: 180px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    #loginBtn {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    .hero {
+        padding: 2rem 0.5rem;
+    }
+
+    .hero-img,
+    .services-img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        margin: 16px auto 0 auto;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0.5rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+        min-width: unset;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .contact-block {
+        padding: 1rem;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero {
+        padding: 1rem 0.2rem;
+    }
+
+    .hero-img,
+    .services-img {
+        width: 100%;
+        max-width: 160px;
+        margin: 12px auto 0 auto;
+    }
+
+    .service-card,
+    .contact-block {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        padding: 0.5rem;
+        max-width: 98vw;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background: var(--color-gris-claro);
+}
+
+.contact-info h2 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--color-azul-menta);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-details {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-block {
+    background: var(--color-blanco);
+    color: var(--color-texto);
+    padding: 24px 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.08);
+    min-width: 220px;
+    text-align: center;
+    margin: 0 8px;
+}
+
+/* Imágenes de atención con bordes redondeados */
+.hero-img,
+.services-img,
+.attention-img {
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.12);
+    display: block;
+    margin: 24px auto 0 auto;
+    max-width: 100%;
+    height: auto;
+}
