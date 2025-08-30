@@ -671,3 +671,110 @@ form button:hover {
     max-width: 100%;
     height: auto;
 }
+
+/* Estilos para registro.html */
+/* ...puedes agregar esto al final de styles.css... */
+
+/* Contenedor principal del registro */
+.registro-container {
+    background: var(--color-blanco);
+    max-width: 480px;
+    margin: 48px auto 32px auto;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(46, 183, 183, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.6s;
+}
+
+.registro-container h2 {
+    color: var(--color-azul-menta);
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.registro-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.registro-form label {
+    color: var(--color-azul-menta);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.registro-form input,
+.registro-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-azul-menta);
+    font-size: 1rem;
+    background: var(--color-gris-claro);
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+}
+
+.registro-form input:focus,
+.registro-form select:focus {
+    border-color: var(--color-menta-claro);
+    outline: none;
+}
+
+.registro-form button {
+    background: var(--color-azul-menta);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+.registro-form button:hover {
+    background: var(--color-menta-claro);
+    color: var(--color-texto);
+}
+
+/* Mensaje de éxito/error */
+.registro-mensaje {
+    margin-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #e63946;
+}
+
+/* Responsive para registro */
+@media (max-width: 768px) {
+    .registro-container {
+        max-width: 98vw;
+        padding: 18px 8px;
+        margin: 24px auto;
+    }
+
+    .registro-container h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registro-container {
+        padding: 8px 2px;
+        margin: 12px auto;
+        border-radius: 10px;
+    }
+
+    .registro-form button {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
